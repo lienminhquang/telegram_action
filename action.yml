@@ -1,8 +1,16 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  TELEGRAM_TOKEN:  # id of input
+    description: 'telegram token'
+    required: true
+    default: 'World'
+  TELEGRAM_TO:  # id of input
+    description: 'telegram to id'
+    required: true
+    default: 'World'
+  message:  # id of input
+    description: 'message'
     required: true
     default: 'World'
 outputs:
