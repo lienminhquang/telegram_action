@@ -1,15 +1,13 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+require ('dotenv').config()
+const telegram = require('node-telegram-bot-api')
 
 try {
-  // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
-  console.log(`Hello ${nameToGreet}!`);
-  const time = (new Date()).toTimeString();
-  core.setOutput("time", time);
-  // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
+
+    const bot = new telegram(core.getInput('TELEGRAM_TOKEN'));
+    bot.sendMessage(core.getInput('TELEGRAM_TO'), 'Hello im git action');
+
 } catch (error) {
   core.setFailed(error.message);
 }
