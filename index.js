@@ -11,7 +11,7 @@ try {
 
     const filePath = core.getInput('file');
     if(filePath != "") {
-        await bot.sendAudio(chatID, filePath);
+        bot.sendAudio(chatID, filePath);
     }
     
 
