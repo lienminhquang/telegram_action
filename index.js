@@ -1,8 +1,8 @@
+process.env["NTBA_FIX_319"] = 1;
 const core = require('@actions/core');
 const github = require('@actions/github');
 require ('dotenv').config()
 const telegram = require('node-telegram-bot-api')
-process.env.NTBA_FIX_319 = 1;
 
 try {
     const chatID = core.getInput('TELEGRAM_TO');
