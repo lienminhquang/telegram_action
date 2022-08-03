@@ -6,8 +6,11 @@ const telegram = require('node-telegram-bot-api')
 
 try {
     const chatID = core.getInput('TELEGRAM_TO');
+    const parse_mode = core.getInput('PARSE_MODE');
     const bot = new telegram(core.getInput('TELEGRAM_TOKEN'));
-    bot.sendMessage(chatID, core.getInput('message'));
+    bot.sendMessage(chatID, core.getInput('message'), {
+      parse_mode: parse_mode.length == 0 ?  "Markdown" : parse_mode,
+    });
 
     const filePath = core.getInput('file');
     if(filePath != "") {
