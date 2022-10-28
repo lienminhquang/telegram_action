@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Telegram_Action'
+description: 'Telegram action that can run on MacOS runners'
 inputs:
   TELEGRAM_TOKEN:  # id of input
     description: 'telegram token'
