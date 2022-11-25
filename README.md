@@ -1,2 +1,1 @@
-# telegram_action
-# telegram_action
+# Telegram action that can run on MacOS runners
