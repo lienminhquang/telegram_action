@@ -1,7 +1,8 @@
 name: 'Telegram_Action_MAC'
 description: 'Telegram action that can run on MacOS runners'
-icons: message-square
-color: purple
+branding:
+  icon: 'message-square'
+  color: 'purple'
 inputs:
   TELEGRAM_TOKEN:  # id of input
     description: 'telegram token'
