@@ -1,4 +1,4 @@
-name: 'Telegram_Action'
+name: 'Telegram_Action_MAC'
 description: 'Telegram action that can run on MacOS runners'
 inputs:
   TELEGRAM_TOKEN:  # id of input
