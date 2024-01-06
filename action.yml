@@ -17,6 +17,10 @@ inputs:
     description: 'file path'
     required: false
     default: ""
+  PARSE_MODE:
+    description: 'Mode for parsing entities in the message text. '
+    required: false
+    default: 'MarkdownV2'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
