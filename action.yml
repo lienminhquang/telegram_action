@@ -1,5 +1,8 @@
-name: 'Telegram_Action'
+name: 'Telegram_Action_MAC'
 description: 'Telegram action that can run on MacOS runners'
+branding:
+  icon: 'message-square'
+  color: 'purple'
 inputs:
   TELEGRAM_TOKEN:  # id of input
     description: 'telegram token'
@@ -17,6 +20,10 @@ inputs:
     description: 'file path'
     required: false
     default: ""
+  PARSE_MODE:
+    description: 'Mode for parsing entities in the message text. '
+    required: false
+    default: 'MarkdownV2'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
